@@ -112,3 +112,13 @@ export function saveApiKeyForProvider(providerId: string, apiKey: string): boole
   if (!apiKeyName) return false;
   return saveApiKeyToEnv(apiKeyName, apiKey);
 }
+
+const TURTLE_API_BASE_URL_DEFAULT = 'https://earn.turtle.xyz/v1';
+
+export function getTurtleApiBaseUrl(): string {
+  return process.env.TURTLE_API_BASE_URL || TURTLE_API_BASE_URL_DEFAULT;
+}
+
+export function getTurtleDistributorId(): string | undefined {
+  return process.env.TURTLE_DISTRIBUTOR_ID;
+}
