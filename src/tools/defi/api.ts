@@ -31,14 +31,12 @@ function setCache<T>(key: string, data: T, ttlMs: number): void {
 const TTL = {
   opportunities: 60_000,
   opportunity: 30_000,
-  route: 0,
   membership: 300_000,
   deposits: 120_000,
   actions: 0,
 } as const;
 
 function getTtl(endpoint: string): number {
-  if (endpoint.startsWith('/route')) return TTL.route;
   if (endpoint.startsWith('/membership')) return TTL.membership;
   if (endpoint.startsWith('/deposit')) return TTL.deposits;
   if (endpoint.startsWith('/actions')) return TTL.actions;

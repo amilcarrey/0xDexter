@@ -1,9 +1,9 @@
 import { StructuredToolInterface } from '@langchain/core/tools';
-import { createDefiSearch } from './defi/index.js';
+import { createDefiSearch, turtleActions } from './defi/index.js';
 import { exaSearch, tavilySearch } from './search/index.js';
 import { skillTool, SKILL_TOOL_DESCRIPTION } from './skill.js';
 import { browserTool } from './browser/index.js';
-import { DEFI_SEARCH_DESCRIPTION, WEB_SEARCH_DESCRIPTION, BROWSER_DESCRIPTION } from './descriptions/index.js';
+import { DEFI_SEARCH_DESCRIPTION, WEB_SEARCH_DESCRIPTION, BROWSER_DESCRIPTION, TURTLE_ACTIONS_DESCRIPTION } from './descriptions/index.js';
 import { discoverSkills } from '../skills/index.js';
 
 /**
@@ -31,6 +31,11 @@ export function getToolRegistry(model: string): RegisteredTool[] {
       name: 'defi_search',
       tool: createDefiSearch(model),
       description: DEFI_SEARCH_DESCRIPTION,
+    },
+    {
+      name: 'turtle_actions',
+      tool: turtleActions,
+      description: TURTLE_ACTIONS_DESCRIPTION,
     },
     {
       name: 'browser',

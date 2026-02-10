@@ -1,6 +1,6 @@
 export const colors = {
-  primary: '#258bff',
-  primaryLight: '#a5cfff',
+  primary: '#00D395',
+  primaryLight: '#7AEDC9',
   success: 'green',
   error: 'red',
   warning: 'yellow',

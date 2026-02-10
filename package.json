@@ -1,7 +1,7 @@
 {
   "name": "dexter-ts",
   "version": "2026.2.6",
-  "description": "Dexter - AI agent for deep financial research.",
+  "description": "Dexter DeFi - AI agent for DeFi yield optimization powered by Turtle protocol.",
   "type": "module",
   "main": "src/index.tsx",
   "bin": {

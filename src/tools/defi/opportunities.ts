@@ -63,7 +63,7 @@ const GetOpportunitiesInputSchema = z.object({
   tvl_greater_than: z.number().optional().describe('Minimum TVL threshold in USD'),
   token: z.string().optional().describe('Filter by deposit token symbol client-side (e.g., "USDC", "ETH")'),
   type: z.enum(['lending', 'vault']).optional().describe('Filter by opportunity type'),
-  min_apr: z.number().optional().describe('Minimum estimated APR (as decimal, e.g., 0.05 for 5%)'),
+  min_apr: z.number().optional().describe('Minimum estimated APR as percentage (e.g., 5 for 5%)'),
   sort_by: z.enum(['tvl', 'apr']).optional().describe('Sort results by TVL or APR (descending)'),
   limit: z.number().optional().describe('Maximum number of results to return'),
 });

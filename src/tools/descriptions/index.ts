@@ -5,3 +5,4 @@
 export { WEB_SEARCH_DESCRIPTION } from './web-search.js';
 export { BROWSER_DESCRIPTION } from './browser.js';
 export { DEFI_SEARCH_DESCRIPTION } from './defi-search.js';
+export { TURTLE_ACTIONS_DESCRIPTION } from './turtle-actions.js';
